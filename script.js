@@ -1,43 +1,51 @@
-
+'use strict';
 
   
 
   const handleSelect = (e) => {
 
-        e.preventDefault();
-        const selectedOption = document.querySelector('#pageviewsSlider').value;
+        const selectedOption = document.querySelector('#page-views-slider').value;
+        const boxChecked = document.querySelector('#yearly-discount');
         console.log('You selected:', selectedOption);
-        document.querySelector('#displayPrice').textContent = selectedOption
-        document.querySelector('#displayUsers').textContent = selectedOption
-        
-        
-        
+        console.log('You selected:', boxChecked);
+        let price, users;
+
         if (selectedOption == 1) {
-          document.querySelector('#displayPrice').textContent = '$8.00'
-          document.querySelector('#displayUsers').textContent = '10k'
-        }
-        if (selectedOption == 2) {
-          document.querySelector('#displayPrice').textContent = '$12.00'
-        document.querySelector('#displayUsers').textContent = '50k'
-        }
-        if (selectedOption == 3) {
-          document.querySelector('#displayPrice').textContent = '$16.00'
-        document.querySelector('#displayUsers').textContent = '100k'
-        }
-        if (selectedOption == 4) {
-          document.querySelector('#displayPrice').textContent = '$24.00'
-        document.querySelector('#displayUsers').textContent = '500k'
-        }
-        if (selectedOption == 5) {
-          document.querySelector('#displayPrice').textContent = '$36.00';
-        document.querySelector('#displayUsers').textContent = '1M'
+          price = 8.00
+          users = '10k'
           
         }
+        if (selectedOption == 2) {
+          price = 12.00
+          users = '50k'
         
-    
+        }
+        if (selectedOption == 3) {
+          price = 16.00
+          users = '100k'
+          
+        }
+        if (selectedOption == 4) {
+          price = 24.00
+          users = '500k'
+        
+        }
+        if (selectedOption == 5) {
+          price = 36.00
+          users = '1M'
+          
+        }
+
+        if (boxChecked.checked) {
+          price  *= 0.75
+        }
+
+        document.querySelector('#display-price').textContent = '$' + price;
+        document.querySelector('#display-users').textContent = users;  
+        console.log('You selected:', price);
 }
 
-document.querySelector('#myForm').addEventListener('input', handleSelect);
+document.querySelector('#my-form').addEventListener('input', handleSelect);
 
 
 
