@@ -12,26 +12,27 @@
     <body>
         <h1 id="target" style="color: blue;" class="cheese">Hello JavaScripters</h1>
         
-        <form id="myForm" action="index.html" method="post" class="banner">
+        <form id="myForm" action="index.html" class="banner">
 
   
 
-            <label for="text">Select the price</label>
+            <label for="pageviews">Select the price</label>
             
-            <select id="species" name="species" required >
-            <option value="1" id="op1">10K pageviews </option>
-            <option value="2" id="op2">50K pageviews</option>
-            <option value="1" id="op3">100K pageviews</option>
-            <option value="2" id="op4">500k pageviews </option>
-            <option value="2" id="op5">1M pageviews</option>
-            
+            <select id="pageviews" name="species" required>
+                <option value="$8 per month" id="op1">10K pageviews </option>
+                <option value="$12 per month" id="op2">50K pageviews</option>
+                <option value="$16 per month" id="op3">100K pageviews</option>
+                <option value="$24 per month" id="op4">500k pageviews </option>
+                <option value="$36 per month" id="op5">1M pageviews</option> 
             </select>
             
             <input type="submit" value="press me">
             
-              
-            
-            <p id="p">Click me!</p>
+            <div id="displayPrice">Price will display here</div>
+
+            <div class="slidecontainer">
+                <input type="range" min="8" max="36" value="16" class="slider" id="myRange" step="8">
+              </div>
 
         
     </body>

@@ -1,38 +1,20 @@
 
 
-
-
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
   
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
 
-  
-  const handleClick = (e) => {
-    console.log(
-        'You clicked on this', e.target,
-        'the event handler is assigned to this', e.currentTarget
-    )
+  const handleSelect = (e) => {
+
+        e.preventDefault();
+        const selectedOption = document.querySelector('#pageviews').value;
+        console.log('You selected:', selectedOption);
+        document.querySelector('#displayPrice').textContent = selectedOption
+        
+    
 }
 
-document.querySelector('#myForm').addEventListener('submit', handleClick);
-object.addEventListener("submit", myScript);
+document.querySelector('#myForm').addEventListener('submit', handleSelect);
+
+
 
 
 
