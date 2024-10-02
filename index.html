@@ -16,23 +16,29 @@
 
   
 
-            <label for="pageviews">Select the price</label>
+            <input type="range" id="pageviewsSlider" name="pviews" list="values" min="1" max="5"/>
             
-            <select id="pageviews" name="species" required>
-                <option value="$8 per month" id="op1">10K pageviews </option>
-                <option value="$12 per month" id="op2">50K pageviews</option>
-                <option value="$16 per month" id="op3">100K pageviews</option>
-                <option value="$24 per month" id="op4">500k pageviews </option>
-                <option value="$36 per month" id="op5">1M pageviews</option> 
-            </select>
+            <datalist id="values" name="species" >
+                <option value="1" id="op1" >10K</option>
+                <option value="2" id="op2">50K</option>
+                <option value="3" id="op3">100K</option>
+                <option value="4" id="op4">500k</option>
+                <option value="4" id="op5">1M</option> 
+
+                
+                
+            </datalist>
+
+            <p>Value: <output id="value"></output></p>
+
             
-            <input type="submit" value="press me">
             
+            <div id="displayNumb">Price will display here</div>
             <div id="displayPrice">Price will display here</div>
 
-            <div class="slidecontainer">
+            <!-- <div class="slidecontainer">
                 <input type="range" min="8" max="36" value="16" class="slider" id="myRange" step="8">
-              </div>
+              </div> -->
 
         
     </body>
