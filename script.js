@@ -37,7 +37,9 @@
         }
 
         if (boxChecked.checked) {
-          price  *= 0.75
+          price *= 12
+          price *= 0.75
+          
         }
 
         document.querySelector('#display-price').textContent = '$' + price;
@@ -47,6 +49,30 @@
 
 document.querySelector('#my-form').addEventListener('input', handleSelect);
 
+
+const viewings = [
+  {
+    view: '10K pageviews',
+    price: 8
+    },
+    {
+    view: '50K PAGEVIEWS',
+    price: 12
+    },
+    {
+    view: '100K PAGEVIEWS',
+    price: 16
+    },
+    {
+    view: '500K PAGEVIEWS',
+    price: 24
+    },
+    {
+    view: '1M PAGEVIEWS',
+    price: 36
+    }
+  
+]
 
 
 
